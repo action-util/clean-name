@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nu-rust-course/clean-name.git"
+    "url": "git+https://github.com/action-util/clean-name.git"
   },
   "keywords": [],
   "author": "Jesse A. Tov <jesse@cs.northwestern.edu>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nu-rust-course/clean-name/issues"
+    "url": "https://github.com/action-util/clean-name/issues"
   },
-  "homepage": "https://github.com/nu-rust-course/clean-name#readme",
+  "homepage": "https://github.com/action-util/clean-name#readme",
   "dependencies": {
     "@actions/core": "^1.1.0",
     "@actions/github": "^1.1.0"

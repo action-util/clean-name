@@ -1,0 +1,30 @@
+on: [push]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    name: Tests
+    steps:
+      - name: Clean a string that’s already clean
+        id: already-clean
+        uses: action-util/clean-name@develop
+        with:
+          dirty: much-soap
+
+      - name: Clean a string that’s slightly dirty
+        id: dirtyish
+        uses: action-util/clean-name@develop
+        with:
+          dirty: has/two/slashes
+
+      - name: Clean a string that’s very dirty
+        id: very-dirty
+        uses: action-util/clean-name@develop
+        with:
+          dirty: a::b<c>/d?
+
+      - name: Check the results
+        run: |
+          test ${{ steps.already-clean.outputs.clean }} = much-soap
+          test ${{ steps.dirtyish.outputs.clean }}      = has_two_slashes
+          test ${{ steps.very-dirty.outputs.clean }}    = a__b_c__d_

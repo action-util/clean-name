@@ -7,19 +7,19 @@ jobs:
     steps:
       - name: Clean a string that’s already clean
         id: already-clean
-        uses: ${{ github.repository }}@${{ github.ref }}
+        uses: action-util/clean-name@${{ github.ref }}
         with:
           dirty: much-soap
 
       - name: Clean a string that’s slightly dirty
         id: dirtyish
-        uses: ${{ github.repository }}@${{ github.ref }}
+        uses: action-util/clean-name@${{ github.ref }}
         with:
           dirty: has/two/slashes
 
       - name: Clean a string that’s very dirty
         id: very-dirty
-        uses: ${{ github.repository }}@${{ github.ref }}
+        uses: action-util/clean-name@${{ github.ref }}
         with:
           dirty: a::b<c>/d?
 

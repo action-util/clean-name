@@ -1,5 +1,5 @@
 name: 'Clean Name'
-description: 'Clean a string into a valid artifact name'
+description: 'Clean a string into a valid artifact name.'
 inputs:
   dirty:
     description: 'The string to clean'

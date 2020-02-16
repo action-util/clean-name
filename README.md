@@ -1,7 +1,7 @@
 # Clean Name – JavaScript action
 
 This action takes a string and turns it into a name suitable for upload as an
-artifact.
+artifact. In particular, all occurrences of these 9 characters are replaced by underscores: `/':<>|*?\`.
 
 ## Inputs
 
